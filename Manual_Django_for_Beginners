@@ -14,3 +14,14 @@ ____________________1. Initial Set Up - Django_project  ____________________
 6. Create a new Django project [.. Project Name = django_project]
     - django-admin startproject django_project .
 7. Add .gitignore
+
+
+____________________2. Git SetUp -- Initialisation  ____________________
+    - git init
+    - git status
+    - git config user.name "ajmalrashadmarkz"
+    - git config user.email "ajmalrashadmarkz@gmail.com"
+    - git add .
+    - git commit -m "1. Setup Django Basics files"
+    -  git remote add origin https://github.com/ajmalrashadmarkz/11_22_02_Django_for_Beginners_Chapter-3_Pages-App.git
+    - git push -u origin master
