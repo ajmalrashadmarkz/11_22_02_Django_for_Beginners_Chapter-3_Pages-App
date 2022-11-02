@@ -28,5 +28,11 @@ ____________________ 2. Git SetUp -- Initialisation  ____________________
 
 ____________________  3. Create App - pages  ____________________
     - Create pages app
-        python manage.py startapp pages
-    - 
+        ○ python manage.py startapp pages
+    - Register the App
+        ○ django_project/settings.py
+        ○  INSTALLED_APPS = [
+			    .....
+			   "pages.apps.PagesConfig", # new
+			]
+
