@@ -30,9 +30,19 @@ ____________________  3. Create App - pages  ____________________
     - Create pages app
         ○ python manage.py startapp pages
     - Register the App
-        ○ django_project/settings.py
+        ○  django_project/settings.py
         ○  INSTALLED_APPS = [
 			    .....
 			   "pages.apps.PagesConfig", # new
 			]
+	- Migrate the database
+	    ○ python manage.py migrate
+
+____________________  4. Setup Template Folder  ____________________
+    - Create new directory in the following order
+        ○ pages[...App folder] -> templates [...New Dir] -> pages [...New Dir]
+    - Create Home Page
+        - pages\templates\pages\home.html
+
+
 
