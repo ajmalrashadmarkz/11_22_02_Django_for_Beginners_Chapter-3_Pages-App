@@ -44,8 +44,8 @@ ____________________  4. Setup Template Folder & Home Page  ____________________
     - Create Home Page
         - pages\templates\pages\home.html
 
-____________________  5. Create Class Based Views for pages  ____________________
-    - pages/views.py
+____________________  5. Create Class Based Views for home.html  ____________________
+    -. pages/views.py
     - import TemplateView -> django.view.generic
     - Create a class
         HomePageView(TemplateView [...Derived Class] ):
