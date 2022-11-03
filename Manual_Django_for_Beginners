@@ -42,16 +42,43 @@ ____________________  4. Setup Template Folder & Home Page  ____________________
     - Create new directory in the following order
         ○ pages[...App folder] -> templates [...New Dir] -> pages [...New Dir]
     - Create Home Page
-        - pages\templates\pages\home.html
+        ○ pages\templates\pages\home.html
+
+                    OR
+    - Create new directory templates in project folder
+        ○ django_project -> templates [...New Dir]
+    - Create Home page
+        ○ django_project\templates\home.html
+    - Add templates in django_project/settings.py
+        TEMPLATES = [
+            {
+                ...
+                "DIRS": [BASE_DIR / "templates"], # new
+                ...
+            },
+        ]
 
 ____________________  5. Create Class Based Views for home.html  ____________________
     -. pages/views.py
     - import TemplateView -> django.view.generic
     - Create a class
-        HomePageView(TemplateView [...Derived Class] ):
-            template_name = "webpage name" [...Class variable]
+        ○ HomePageView(TemplateView [...Derived Class] ):
+               template_name = "webpage name" [...Class variable]
 
-
+____________________  6. SetUp Url for project and app  ____________________
+    - Create new urls.py file in app folder
+        ○ pages/urls.py
+        ○ import path
+        ○ import HomePageView
+        ○ urlpatterns = [
+                path("", HomePageView.as_view(), name="home" ),
+            ]
+    - Include app url in project url
+        ○ django_project/urls
+        ○ import include -> [... from django.urls]
+        ○ urlpatterns = [
+                path("", include("pages.urls")),
+            ]
 
 
 
