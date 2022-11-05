@@ -97,3 +97,30 @@ ____________________  7. Make New page - About  ____________________
         ○ Add path in urlpatterns
             path("about/", AboutPageView.as_view(), name="about"),
 
+____________________  8. Extending Templates - Base.html ____________________
+    - Create a web page - base.html
+        ○ django_project\templates\base.html
+        ○ In Header
+            link - home and about page
+                <a href="{% url "home" %}"></a>
+                <a href="{% url "about" %}"></a>
+        ○ place block
+                {% block content %} {% endblock content %}
+    - update home.html
+        ○  django_project\templates\home.html
+        ○ extends to base class
+            {% extends "base.html" %}
+        ○ Add the contente inside the block
+            {% block content %}
+            <h1>Home Page</h1>
+            {% endblock content %}
+    - update About.html
+        ○ django_project\templates\index.html
+        ○ extends to base class
+            {% extends "base.html" %}
+        ○ Add the contente inside the block
+            {% block content %}
+            <h1> About Page</h1>
+            {% endblock content %}
+
+
