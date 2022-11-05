@@ -59,7 +59,7 @@ ____________________  4. Setup Template Folder & Home Page  ____________________
         ]
 
 ____________________  5. Create Class Based Views for home.html  ____________________
-    -. pages/views.py
+    - pages/views.py
     - import TemplateView -> django.view.generic
     - Create a class
         ○ HomePageView(TemplateView [...Derived Class] ):
@@ -80,6 +80,20 @@ ____________________  6. SetUp Url for project and app  ____________________
                 path("", include("pages.urls")),
             ]
 
-
-
+____________________  7. Make New page - About  ____________________
+    - Create new page - about.html
+        ○ django_project\templates\about.html
+    - Set up the view for page
+        ○ pages/views.py
+        ○ import TemplateView - django.generic.view
+        ○ Create class
+            - name - AboutPageView
+            - derived Class Template View
+            - Class attribute - template_name = "about.html"
+    - Set up the view for page
+        ○ pages/urls.py
+        ○ import path
+        ○ import AboutPageView
+        ○ Add path in urlpatterns
+            path("about/", AboutPageView.as_view(), name="about"),
 
