@@ -124,3 +124,21 @@ ____________________  8. Extending Templates - Base.html ____________________
             {% endblock content %}
 
 
+____________________  9. Diffrent Type of Testing ____________________
+                HomepageTests
+    - Import SimpleTestCase
+    - Import reverse [...from url]
+    - Create a class HomepageTests([base class -> SimpleTestCase])
+    1. url pattern checking "" ->
+        http://127.0.0.1:9000/    -> nothing
+    2. url reverse -> home [...path("",,name="home")]
+    3. template name -> home.html
+    4. content on home.html
+
+                AboutpageTest
+    - Create a class AboutpageTests
+    1. url pattern checking "" ->
+        http://127.0.0.1:9000/about/    -> /about/
+    2. url reverse -> about [...path("",,name="about")]
+    3. template name -> about.html
+    4. content on about.html
